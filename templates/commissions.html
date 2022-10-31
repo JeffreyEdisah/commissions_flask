@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}Commissions{% endblock %}
+
 {% block main %}
 <div class="container">
     <h1 class="mb-5">Commissions</h1>
@@ -7,11 +9,11 @@
     <form action="/commissions_sent" method="post">
         <div class="mb-3">
             <label for="mail" class="form-label">Mail</label>
-            <input type="email" autofocus="on" class="form-control" id="mail" placeholder="nom@exemple.com">
+            <input type="email" autofocus="on" class="form-control" id="mail" name="mail" placeholder="nom@exemple.com">
         </div>
         <div class="mb-3">
             <label for="commissions" class="form-label">Ce que vous voulez que je vous fasse</label>
-            <textarea class="form-control" id="commissions" rows="6"></textarea>
+            <textarea class="form-control" id="commissions" name="commissions" rows="6"></textarea>
         </div>
         <input class="btn btn-primary" type="submit" value="Submit">
     </form>
